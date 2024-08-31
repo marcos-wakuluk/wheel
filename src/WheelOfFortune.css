@@ -1,0 +1,123 @@
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.wheel-wrapper {
+  position: relative;
+}
+
+.wheel {
+  width: 85vh;
+  height: 85vh;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid #444;
+  background-color: #222;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transform-origin: center center;
+  border: 5px solid white;
+}
+
+.segment {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0% 0%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+  border: 5px solid black;
+}
+
+.segment-label {
+  position: absolute;
+  left: 100%;
+  transform: translate(0%, 0) rotate(114deg);
+  transform-origin: 0 0;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.indicator {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #f00;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #666;
+}
+
+.winner {
+  margin-top: 20px;
+  color: #ffd700;
+}
+
+.spinning {
+  animation: spin 5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}
+
+.center-circle {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-image {
+  width: 90%;
+  height: auto;
+}

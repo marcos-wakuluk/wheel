@@ -22,20 +22,22 @@ const WheelOfFortune = () => {
     if (!isSpinning) {
       setIsSpinning(true);
 
-      const newRotation = Math.floor(Math.random() * 36000);
-
-      setRotation(newRotation);
+      const newRotation = Math.random() * 2000 + 2000;
+      setRotation(rotation + newRotation);
 
       setTimeout(() => {
         setIsSpinning(false);
-      }, 3900);
+      }, 4000);
     }
   };
 
   return (
     <div className="wheel-container">
       <div className="wheel-wrapper">
-        <div className={`wheel ${isSpinning ? "spinning" : ""}`} style={{ transform: `rotate(${rotation}deg)` }}>
+        <div
+          className={`wheel ${isSpinning ? "spinning" : ""}`}
+          style={{ transform: `rotate(${rotation}deg)` }}
+        >
           {segments.map((segment, index) => (
             <div
               key={index}
@@ -51,7 +53,6 @@ const WheelOfFortune = () => {
         </div>
         <div className="indicator"></div>
         <div className="center-circle" onClick={spinWheel} disabled={isSpinning}>
-          {/* <img src="/4.jpeg" alt="Logo" className="logo-image" /> */}
           <img src="/5.png" alt="Logo" className="logo-image" />
         </div>
       </div>

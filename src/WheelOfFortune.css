@@ -33,6 +33,11 @@ body {
   overflow: hidden;
   transform-origin: center center;
   border: 5px solid white;
+  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.spinning {
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .segment {
@@ -87,10 +92,6 @@ button:disabled {
 .winner {
   margin-top: 20px;
   color: #ffd700;
-}
-
-.spinning {
-  animation: spin 5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 @keyframes spin {

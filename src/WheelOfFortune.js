@@ -7,14 +7,14 @@ const WheelOfFortune = () => {
   const [rotation, setRotation] = useState(0);
 
   const segments = [
-    { icon: <FaHeart size={50} color="black" /> },
-    { icon: <FaBeer size={50} color="black" /> },
-    { icon: <FaLaugh size={50} color="black" /> },
-    { icon: <FaStar size={50} color="black" /> },
-    { icon: <FaHeart size={50} color="black" /> },
-    { icon: <FaBeer size={50} color="black" /> },
-    { icon: <FaLaugh size={50} color="black" /> },
-    { icon: <FaStar size={50} color="black" /> },
+    { icon: <FaHeart className="icon" style={{ color: "black" }} /> },
+    { icon: <FaBeer className="icon" style={{ color: "white" }} /> },
+    { icon: <FaLaugh className="icon" style={{ color: "black" }} /> },
+    { icon: <FaStar className="icon" style={{ color: "white" }} /> },
+    { icon: <FaHeart className="icon" style={{ color: "black" }} /> },
+    { icon: <FaBeer className="icon" style={{ color: "white" }} /> },
+    { icon: <FaLaugh className="icon" style={{ color: "black" }} /> },
+    { icon: <FaStar className="icon" style={{ color: "white" }} /> },
   ];
   const segmentAngle = 360 / segments.length;
 
@@ -34,17 +34,14 @@ const WheelOfFortune = () => {
   return (
     <div className="wheel-container">
       <div className="wheel-wrapper">
-        <div
-          className={`wheel ${isSpinning ? "spinning" : ""}`}
-          style={{ transform: `rotate(${rotation}deg)` }}
-        >
+        <div className={`wheel ${isSpinning ? "spinning" : ""}`} style={{ transform: `rotate(${rotation}deg)` }}>
           {segments.map((segment, index) => (
             <div
               key={index}
               className="segment"
               style={{
                 transform: `rotate(${index * segmentAngle}deg)`,
-                backgroundColor: index % 2 === 0 ? "#ff6347" : "#4682b4",
+                backgroundColor: index % 2 === 0 ? "#37F648" : "black",
               }}
             >
               <div className="segment-label">{segment.icon}</div>

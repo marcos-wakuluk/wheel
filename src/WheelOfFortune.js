@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaBeer, FaHeart, FaLaugh, FaStar } from "react-icons/fa";
 import "./WheelOfFortune.css";
 
 const WheelOfFortune = () => {
@@ -7,14 +6,14 @@ const WheelOfFortune = () => {
   const [rotation, setRotation] = useState(0);
 
   const segments = [
-    { icon: <FaHeart className="icon" style={{ color: "black" }} /> },
-    { icon: <FaBeer className="icon" style={{ color: "white" }} /> },
-    { icon: <FaLaugh className="icon" style={{ color: "black" }} /> },
-    { icon: <FaStar className="icon" style={{ color: "white" }} /> },
-    { icon: <FaHeart className="icon" style={{ color: "black" }} /> },
-    { icon: <FaBeer className="icon" style={{ color: "white" }} /> },
-    { icon: <FaLaugh className="icon" style={{ color: "black" }} /> },
-    { icon: <FaStar className="icon" style={{ color: "white" }} /> },
+    { text: "Beso", color: "black" },
+    { text: "Chiste", color: "white" },
+    { text: "Baile", color: "black" },
+    { text: "Chamullo", color: "white" },
+    { text: "Beso", color: "black" },
+    { text: "Chiste", color: "white" },
+    { text: "Baile", color: "black" },
+    { text: "Chamullo", color: "white" },
   ];
   const segmentAngle = 360 / segments.length;
 
@@ -44,7 +43,11 @@ const WheelOfFortune = () => {
                 backgroundColor: index % 2 === 0 ? "#37F648" : "black",
               }}
             >
-              <div className="segment-label">{segment.icon}</div>
+              <div 
+              className="segment-label" 
+              style={{
+                color: index % 2 === 0 ? "black" : "white",
+              }}>{segment.text}</div>
             </div>
           ))}
         </div>

@@ -64,11 +64,11 @@ body {
   font-weight: bold;
   transform: translate(0%, 0) rotate(114deg);
   transform-origin: 0 0;
-  width: 47%;
+  width: 50%;
   font-weight: bold;
   text-align: center;
   color: #fff;
-  font-size: 45px;
+  font-size: 60px;
   pointer-events: none;
   text-transform: uppercase;
   font-family: "Anton", sans-serif;

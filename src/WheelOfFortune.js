@@ -43,11 +43,14 @@ const WheelOfFortune = () => {
                 backgroundColor: index % 2 === 0 ? "#37F648" : "black",
               }}
             >
-              <div 
-              className="segment-label" 
-              style={{
-                color: index % 2 === 0 ? "black" : "white",
-              }}>{segment.text}</div>
+              <div
+                className="segment-label uppercase"
+                style={{
+                  color: index % 2 === 0 ? "black" : "white",
+                }}
+              >
+                {segment.text}
+              </div>
             </div>
           ))}
         </div>

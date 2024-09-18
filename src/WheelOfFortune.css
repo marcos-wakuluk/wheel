@@ -58,7 +58,7 @@ body {
 }
 
 .segment-label {
-  writing-mode: vertical-rl; 
+  writing-mode: vertical-rl;
   position: absolute;
   left: 100%;
   font-weight: bold;
@@ -70,6 +70,10 @@ body {
   color: #fff;
   font-size: 45px;
   pointer-events: none;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .indicator {
